@@ -1,0 +1,24 @@
+1. search bar when active shows a black rectangle remove that
+2. make the wishlist page
+3. Add Transaction (post method) pls Add
+4. the > icon in transactions page should show more details about the transactions
+5. can add update and delete methods for 4. later
+6. the navbar - make the page name currently we are at active
+7. make the reports part work - all the other buttons
+8. make the home page work properly, so it shows all the graphs etc
+9. make the Filters button in reports page work - think of something for it's purpose what to do with it
+10. All Transactions, Edit Multiple buttons dont work, think what to do withthem (transactions page)
+11. Add Authentication, multiple users use it
+12. make the Cards and Investment page
+13. All amounts button doesnt work in transactions page, think what to do with it
+14. in server add the cors and check what else is needed 
+15. in server.js, there was thing that it should open from anywhere, any location in terminal, like even  from Insight\
+16. there was something wrong with 404.html page, when at localhost:8000/api/reports/ksgfdkajdkhk the css wont center everything and when you click the home button we dont return to index page
+17. Someday, probably never, make this with postres sql
+18. yes in report page, summary should also have the csv download part
+19. also delete all chatgpt stuff, test.html, format.html unnecessary comments, icons and commented out and unneeded code
+20. 80% VIEWWWWWW CHROME, THAT IS WHAT LOOKS GOOD, 100% LOOKS SO GIANT, WHAT DO I DO NOW GET HELPPPPP
+21. Make the Transactions more real looking like, balance the expense and savings and income etc it's highly unbalanced
+22. Make the post panels for the goals one and the transactions one
+23. Finish the Dashboard, make the Graphs work please
+❤️

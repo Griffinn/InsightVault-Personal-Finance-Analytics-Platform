@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reports</title>
+
+    <!-- ADD THE FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap" rel="stylesheet">
+
+    <!-- ADD THE BOOTSRAP LINK-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!--ADD THE STYLES SHEET LINK-->
+    <link rel = "stylesheet" href = "./reports.css"/>
+
+    <!--FontAwesome Icon script tag-->
+    <script src="https://kit.fontawesome.com/082c5cb8b7.js" crossorigin="anonymous"></script>
+
+    <!--Charts.js-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+    <div class = "grid-container-1">
+        <!--navbar-->
+        <div class = "grid-item-1a Navbar">
+            <div id = "top">   
+                <!--INSERT Icon for Insight Vault-->                                                                                                                            <!--The whole thing is to be made a grid do it later-->
+                <img class = "logo" src="https://cdn-icons-png.flaticon.com/128/10693/10693030.png" alt="money icons"/>
+                <h1 id = "heading">InsightVault</h1>
+                <!--SEARCH BAR-->
+                <div class = "search-container">
+                    <form role="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <label for="search-input" class="visually-hidden"></label>
+                    <input id="search-input" type="text" placeholder= "Search">
+                    </form>
+                </div>
+            </div>
+
+            <hr class = "divider"/>
+
+            <div id = "middle" class = "flex-container1">
+                <div class = "flex-item1"><a href = "./index.html"><i class="fa-solid fa-bars"></i> Dashboard</a></div>                                                                             
+                <div class = "flex-item1"><a href = "./transactions.html"><i class="fa-solid fa-money-bill-transfer"></i> Transaction</a></div>
+                <div class = "flex-item1"><a href = "./wishlist.html"><i class="fa-solid fa-heart"></i> Wishlist</a></div>                                                                                  <!--Try to get accurate icons later, CORRECT THE SPACING BETWEEN ICONS-->
+                <div class = "flex-item1"><a href = "./reports.html"><i class="fa-solid fa-chart-simple"></i> Reports</a></div>                                                                                   <!--Make the page later in ver2.0-->
+                <div class = "flex-item1"><a href = "./cards.html"><i class="fa-solid fa-credit-card"></i> Card</a></div>                                                                                <!--Make the page later in ver2.0-->
+                <div class = "flex-item1"><a href = "./investments.html"><i class="fa-solid fa-money-bill-trend-up"></i> Investment</a></div>                                                                <!--Make the page later in ver2.0-->
+            </div>
+
+            <div id = "bottom" class = "flex-container2">
+                <div class = "flex-item2"><i class="fa-solid fa-gear"></i> Settings</div>
+                <div class = "flex-item2"><i class="fa-solid fa-circle-info"></i> Help</div>
+                <div class = "flex-item2 log-out-btn"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log out</div>                                                    <!--Work on Authentication later, make the log-in page later-->           
+            </div>
+
+            <div id = "user-info">                                                                                                                                              <!--After creating the authentication logic and its backend, --> 
+                <img id = "profile-picture" src = "https://img.freepik.com/free-photo/front-view-business-woman-suit_23-2148603018.jpg?semt=ais_hybrid&w=740&q=80" alt = "profile picture of the logged-in user"/>                                                                              <!--make the whole div dynamic not hard coded -->
+                <div class = "login-user-info">
+                    <h3 id = "username">Jenny Stacy</h3>
+                    <h4 id = "email-id">jennystacy@gmail.com</h4>
+                </div>                    
+            </div>
+        </div>
+
+
+        <div class = "grid-item-1b transactions">
+            <div id = "transactions-heading">
+                <span>
+                    <span class = "grey"><i class="fa-solid fa-bars"></i> Reports</span>
+                    <span>/ Overview</span>
+                </span>
+                            
+                <div class = "grey">
+                    <!-- <button class = "btn btn-light">This month <i class="fa-solid fa-calendar"></i></button> -->
+                    <div class="dropdown">
+                        <button id = "time-selector-btn" class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            This Month <i class="fa-solid fa-calendar"></i>
+                        </button>
+                        <ul id = "time-selector-dropdown" class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">This Week</a></li>
+                            <li><a class="dropdown-item" href="#">This Month</a></li>
+                            <li><a class="dropdown-item" href="#">This Quarter</a></li>
+                            <li><a class="dropdown-item" href="#">This Year</a></li>
+                        </ul>
+                    </div>
+                    <button class = "btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Filters <i class="fa-solid fa-filter"></i></button>         <!--THINK ABOUT WHAT TO DO WITH THIS LATERR!!!-->
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#"></a></li>
+                        <li><a class="dropdown-item" href="#"></a></li>
+                        <li><a class="dropdown-item" href="#"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr id = "divider-2">
+
+            <div class = "graph-div">
+                <div class = "flex-container3">
+                    <div class = "report-info">
+                        <p id = "title">SPENDING BY CATEGORY</p>
+                        <h3 class = "time-period">Dec 1, 2024 - Dec 31, 2024</h3>
+                    </div>
+                    <div class = "flex-container4">
+                        <!--Category dropdown-->
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                By Category
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">By Category</a></li>
+                                <li><a class="dropdown-item" href="#">By Type</a></li>
+                                <li><a class="dropdown-item" href="#">By Group</a></li>
+                            </ul>
+                        </div>
+
+                        <span>|</span>
+
+                        <div>
+                            <button class = "btn btn-light">Total Amounts</button>
+                            <button class = "btn btn-light">Change over time</button>
+                        </div>
+                        
+                        <span>|</span>
+
+                        <div>
+                            <button class = "btn btn-light"><i class="fa-solid fa-chart-pie"></i></button>
+                            <button class = "btn btn-light"><i class="fa-regular fa-chart-bar"></i></button>
+                        </div>
+                        
+                        <span>|</span>
+
+                        <button class = "btn btn-light"><i class="fa-solid fa-arrow-up-from-bracket"></i> Share</button>
+                    </div>
+                </div>
+
+                <!------------------------CANVAS FOR GRAPHS-------------------->
+                <div class="graph-card">
+                    <div class="chart-wrapper">
+                        <canvas id="categoryPieCanvas"></canvas>
+                        <div id="categoryLegend" class="custom-legend"></div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <div class = "grid-container-2">
+                <!-- Contains Transactions Cards -->
+                <div class = "grid-item-2 grid-2-item-1">
+                    <div class="card options-header" aria-labelledby="transactions-title">
+                        <button class = "btn btn-light all-transactions">All Transactions <i class="fa-solid fa-chevron-down"></i></button>
+                        <button class = "btn btn-light edit-multiple">Edit Multiple</button>
+                    </div>
+                    <div class="cards-container">
+                        
+
+                    </div>
+                    <div id = "pagination">  <!--PAGINATION DIV-->
+
+                    </div>
+                </div>
+
+                <!-- Summary -->
+                <div class = "flex-container6">
+                <div class = "grid-item-2 grid-2-item-2">
+                    <h3>Summary</h3>
+                    <hr class = "divider-3">
+                    <div class = "flex-container5">
+                        <div class = "summary-headings">
+                            <p>Total transactions</p>
+                            <p>Lagrest transaction</p>
+                            <p>Average transaction</p>
+                            <p>Total Spending</p>
+                        </div>
+                        <div class = "summary-values">
+                            <p id = "summary-total">38</p>
+                            <p id = "summary-largest">$1,385.00</p>
+                            <p id = "summary-average">$116.23</p>
+                            <p id = "summary-spending">$3,719.46</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Filters -->
+                <div class = "grid-item-2 grid-2-item-3">
+                    <h3>Filter & Sort</h3>
+                        
+                    <hr class = "divider-3"/>
+
+                    <p class = "label">Sort By</p>                                                              <!-- Sort by: By Date/Amount/Name -->
+                    <div class="dropdown-center">
+                        <button id = "SortBy-dropdown" class="btn btn-light dropdown-toggle filter-options" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Date
+                        </button>
+                        <ul class="dropdown-menu">                                                              
+                            <li><a class="dropdown-item dropdown-1-item" href="#">Date (New to Old)</a></li>
+                            <li><a class="dropdown-item dropdown-1-item" href="#">Date (Old to New)</a></li>
+                            <li><a class="dropdown-item dropdown-1-item" href="#">Amount (Largest to Smallest)</a></li>
+                            <li><a class="dropdown-item dropdown-1-item" href="#">Amount (Smallest to Largest)</a></li>
+                            <li><a class="dropdown-item dropdown-1-item" href="#">Name (A to Z)</a></li>
+                            <li><a class="dropdown-item dropdown-1-item" href="#">Name (Z to A)</a></li>
+                        </ul>
+                    </div>
+
+                    <p class = "label">Search</p>                                                               <!--Search: By Title/Merchant-->
+                    <div class = "search-container btn btn-light filter-options search-bar-2">
+                        <form role="search">
+                        <input id="search-input" class = "search-input-2" type="text" placeholder= "Search">
+                        </form>
+                    </div>
+
+                    <p class = "label">Categories</p>
+                    <div class="dropdown-center">                   <!--Change the options inside dropdown-->
+                        <button id = "Categories-dropdown-button"class="btn btn-light dropdown-toggle filter-options" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            All Categories
+                        </button>
+                        <ul id = "categories-dropdown" class="dropdown-menu">
+                            <!-- <li><a class="dropdown-item" href="#">Category 1</a></li>
+                            <li><a class="dropdown-item" href="#">Category 2</a></li> -->
+                        </ul>
+                    </div>
+
+                    <p class = "label">Type</p>
+                    <div class="dropdown-center">                   <!--Change the options inside dropdown-->
+                        <button id = "Type-dropdown-btn" class="btn btn-light dropdown-toggle filter-options" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            All Types
+                        </button>
+                        <ul id = "Type-dropdown" class="dropdown-menu">
+                            <li><a class="dropdown-item dropdown-3-item" href="#">Income</a></li>
+                            <li><a class="dropdown-item dropdown-3-item" href="#">Expense</a></li>
+                            <li><a class="dropdown-item dropdown-3-item" href="#">All Types</a></li>
+                        </ul>
+                    </div>
+
+                    <p class = "label">Amounts</p>
+                    <div class="dropdown-center">                   <!--Change the options inside dropdown, implement this later-->
+                        <button class="btn btn-light dropdown-toggle filter-options" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            All Amounts
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Amount category 1</a></li>
+                            <li><a class="dropdown-item" href="#">Amount category 2</a></li>
+                            <li><a class="dropdown-item" href="#">To Be Implemented Later</a></li>
+                        </ul>
+                    </div>
+
+                    <p class = "label">Date Range</p>
+                    <div class = "btn btn-light filter-options date-range">
+                        <input id = "startDate-input-1" class = "date-selector"
+                            type="date"
+                            id="start"
+                            name="trip-start"     
+                            min="2018-01-01"
+                            max="9999-12-31" />
+                        
+                        <i class="fa-solid fa-arrow-right"></i>
+                        
+                        <input id = "startDate-input-2" class = "date-selector"
+                            type="date"
+                            id="start"
+                            name="trip-start"
+                            min="2018-01-01"
+                            max="9999-12-31" />
+                    </div>
+                </div> <!--End of filters-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Bootstrap script tag-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <!--Add the script tag-->
+    <script type="module" src = "./reports.js"></script>
+
+    
+
+</body>
+</html>

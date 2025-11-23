@@ -1,0 +1,554 @@
+body{
+    font-family: sans-serif;                                /*Change later*/
+    /* background-color: #F8FAFC; */
+}
+
+.grid-container-1 {
+    display: grid;
+    grid-template-columns: 1.5fr 10fr;
+    grid-template-rows: auto auto;
+    gap: 0px;
+}
+
+.logo{
+    height: 40px;
+    width: 40px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+}
+
+#heading{
+    display: inline-block;
+    padding: 0px;
+    margin: 45px 0px 25px 0px;
+    font-size: 1.8rem;
+    font-family: "DM Serif Text", serif;                        /*Change the font properties later: size, style, color?*/
+    font-weight: 400;
+    font-style: normal;
+}
+
+.search-container{
+    background-color: rgba(128, 128, 128, 0.121);
+    border-radius: 10px;
+    padding: 7px 5px 5px 10px;
+    margin-bottom: 25px;
+    
+}
+
+#search-input{
+    border: none;
+    background-color: rgba(128, 128, 128, 0);
+    width: 170px;
+    height: 30px;
+    padding-left: 6px;
+    width: 85%;
+}
+
+.divider{
+    border-style: solid;     
+    margin: 0px;   
+    margin-bottom: 7px;
+    filter: blur(0.2px); /* slight blur to soften the edges */
+    color: lightslategray;
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.flex-container1{
+    display: flex;
+    gap: 0px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.flex-item1{
+    margin: 10px 0 10px 0;
+    width: 100%;
+    color: grey;
+    padding-left: 10px;
+}
+
+.flex-container2{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 20.5vh;
+    height: 75vh;
+    gap: 20px;
+}
+
+.flex-item2{
+    color: grey;
+    width: 100px;
+    text-align: left;
+    padding-left: 10px
+}
+
+#user-info {
+    margin-top: 40px;
+}
+
+#profile-picture {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    float: left;
+}
+
+.login-user-info {
+    text-align: left;
+    padding-left: 65px;
+}
+
+#username {
+    font-size: 1em;
+    font-weight: 500;
+    /* display: inline; */
+    text-align: left;
+}
+
+#email-id {
+    font-size: 0.9rem;
+    text-align: left;
+    color: grey;
+}
+
+.log-out-btn {
+    color: crimson;
+}
+
+.Navbar{
+    margin-left: 20px;
+}
+
+/*Dashboard*/
+
+.transactions{
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 10px 8px rgba(0,0,0,0.1);
+    margin: 20px;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+#divider-2{
+    width: calc(100% + 60px); /* compensate for left + right */
+    margin: 0px -30px;
+}
+
+#transactions-heading{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content:space-between;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+}
+
+.dropdown {
+    display: inline;
+}
+
+.grey {
+    color: gray;
+}
+
+#overview {
+    margin-bottom: 20px;
+}
+
+#overview > h2 {
+    font-size: 1.7rem;
+    padding-top: 20px;
+    padding-bottom: 10px
+}
+
+
+
+.grid-item-3 {
+    /* background-color: #F8FAFC; */
+    border-radius: 15px;
+    box-shadow: 0px 3px 5px 3px rgba(0,0,0,0.1);
+    padding: 20px;
+}
+
+.fa-filter, .fa-calendar{
+    color: grey;
+}
+
+.btn-light {
+  --bs-btn-bg: white;         /* sets background color to white */
+  --bs-btn-color: black;      /* sets text color to black */
+  --bs-btn-border-color: #dcdcdc; /* optional: makes border white too */
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+/* info bar */
+
+#title{
+    margin-bottom: 8px;
+    color: grey;
+    font-weight: bold;
+    font-size: 0.94em;
+}
+
+.time-period{
+    font-size: 1.5em;
+}
+
+.report-info{
+    width: 400px;
+}
+
+.flex-container3{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* margin-top: 20px; */
+}
+
+.flex-container4{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    height: 40px;
+    align-items: center;
+    gap: 10px;
+}
+
+.graph-div{
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0px 3px 5px 3px rgba(0,0,0,0.1);
+    padding: 20px 20px 20px 20px;
+    margin-top: 20px;
+    /* height: 400px; */
+}
+
+/*----------- Transactions part of reports------------- */
+.grid-container-2{                              /*Grid containing the summary and the transactions*/
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
+    gap: 25px;
+    margin-top: 20px;
+    align-items: start; 
+}
+
+.grid-item-2{
+    border-radius: 10px;
+    box-shadow: 0px 3px 5px 3px rgba(0,0,0,0.1);
+    padding: 20px;
+}
+
+.grid-2-item-1{
+    grid-row: span 2;
+}
+
+.grid-2-item-2{
+    grid-row: span 1; 
+    grid-auto-rows: min-content;   
+}
+
+.grid-2-item-3{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row: span 1;
+    grid-auto-rows: min-content;
+}
+
+#pagination{
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.options-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 6px;
+}
+
+.all-transactions{
+    width: 160px !important; 
+}
+
+.edit-multiple{
+    width: 130px !important; 
+}
+
+.flex-container5{                               /*summary data flexbox*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.summary-headings{
+    color: grey;
+}
+
+.summary-values{
+    text-align: right;
+    /* font-weight: bold; */
+}
+
+.divider-3 {                            /*summary hr*/
+    width: calc(100% + 40px);
+    margin-left: -20px;
+}
+
+/*Transactions.js elements'*/
+.grid-container{                                /*for each transaction data in the list of transactions*/
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr; 
+  align-items: center;
+  padding: 10px 15px 0px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.amount {
+    text-align: right;
+    color: rgb(28, 190, 166);
+    font-weight: 500;
+}
+
+.fa-chevron-right{
+  margin-left: 20px;   
+  font-size: 0.85em;  
+  color: #9ca3af;     
+}
+
+.active {
+  background-color: #e0f2fe; /* light blue */
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: all 0.2s ease;
+}
+
+.date-header {
+  background-color: #f3f4f6; /* light grey */
+  padding: 6px 12px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 6px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.flex-container6 {                      /*flexbox that has summary and filters*/
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 25px; 
+}
+
+/*Filter related styling*/
+.label {
+    margin: 30px 0px 10px 0px;
+    font-weight: bold;
+    color: #444444;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+/* .filter-options {
+    width: 100% !important;
+    background-color: white !important;
+    color: black !important;
+    border-width: 0.1px !important;
+    text-align: left !important;
+} */
+
+.filter-options{ 
+    margin-bottom: 10px;
+}
+
+.btn-light.filter-options {
+  --bs-btn-bg: white;        
+  --bs-btn-color: black;     
+  --bs-btn-border-color: #dcdcdc; 
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  width: 100% !important;
+  text-align: left;
+}
+
+.search-bar-2 {
+    border-radius: 5px;
+    border: 0.1px solid #dcdcdc;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    background-color: white;
+    margin-bottom: 10px;
+}
+
+.date-range {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    border: 0.1px solid #dcdcdc;
+    padding: 7px;
+    border-radius: 5px;
+    height: 42px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.fa-arrow-right{
+    position: relative;
+    top: 5px;
+}
+
+.date-selector {
+    width: 45%;
+    border-radius: 5px;
+    border: 0.1px solid #dcdcdc;
+    padding-left: 5px; 
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+#search-input.search-input-2{
+    width: 100%;
+}
+
+/* reports.js related - the charts */
+/* .graph-card {
+  /* background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  max-width: 800px;
+  margin: 20px auto; */
+
+/* .chart-wrapper {
+  display: flex;
+  gap: 50px; 
+  align-items: center;
+  flex-wrap: wrap; 
+}
+
+#categoryPieCanvas {
+  max-width: 1400px;
+  max-height: 300px;
+  width: 100%;
+  height: auto;
+}
+
+.custom-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; 
+}
+
+.custom-legend .legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.custom-legend .legend-color {
+  width: 20px;
+  height: 12px;
+  display: inline-block;
+  border-radius: 3px;
+} */
+
+
+/* 1. CHART WRAPPER: Defines the space and alignment for the graph (left) and legend (right) */
+.chart-wrapper {
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: nowrap; 
+    align-items: flex-start; 
+    gap: 40px; 
+}
+
+/* 2. CHART CANVAS: Set its width proportion to ensure the legend has room on the right */
+#categoryPieCanvas {
+    width: 65%; 
+    max-width: 600px; 
+    max-height: 400px;
+    height: auto;
+    flex-shrink: 0; 
+}
+
+/* 3. CUSTOM LEGEND: Take the remaining space and arrange items in many columns */
+.custom-legend {
+    flex-grow: 1; 
+    display: flex; 
+    flex-direction: row; 
+    flex-wrap: wrap; 
+    gap: 8px 15px; 
+    padding-top: 5px; 
+    padding-right: 10px;
+}
+
+/* 4. LEGEND ITEM: Control item width to maximize column count */
+.custom-legend .legend-item {
+    max-width: 30%; 
+    flex-shrink: 0; 
+    display: flex;
+    align-items: center;
+    gap: 6px; 
+    font-size: 14px;
+}
+
+/* 5. LEGEND COLOR: Minor adjustment for visual neatness */
+.custom-legend .legend-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+    flex-shrink: 0;
+}
+
+
+/* BAR CHART 2ND FUNC */
+
+.legend-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.legend-color {
+  width: 20px;
+  height: 12px;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+
+/* navBar Highlight function from .js */
+.nav-active {
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.12);
+  transform: translateY(-2px);
+  transition: all 0.2s ease;
+  width: 100%;
+}
+.nav-active a {
+  color: #444444; 
+  font-weight: 600;
+}
+
+
+

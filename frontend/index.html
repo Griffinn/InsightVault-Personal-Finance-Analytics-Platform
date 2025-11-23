@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <title>Dashboard</title>
+        <!--Description (shows up in Google and link previews) -->
+        <meta name="description" content="InsightVault helps you track your income, expenses, savings, and goals all in one clean dashboard. Gain clarity and control over your finances with beautiful analytics.">
+
+        <!-- Author & Ownership -->
+        <meta name="author" content="Khushi Prasad">
+        <meta name="copyright" content="© 2025 Khushi Prasad. All rights reserved.">
+
+        <!-- SEO Keywords -->
+        <meta name="keywords" content="finance dashboard, budget tracker, expense manager, insightvault, personal finance, web app, portfolio project">
+        
+        <!-- ADD THE FONTS-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap" rel="stylesheet">
+
+        <!-- ADD THE BOOTSRAP LINK-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        
+        <!--ADD THE STYLES SHEET LINK-->
+        <link rel = "stylesheet" href = "./index.css"/>
+        
+        <!--ADD FAVICON-->
+
+
+        <!--FontAwesome Icon script tag-->
+        <script src="https://kit.fontawesome.com/082c5cb8b7.js" crossorigin="anonymous"></script>
+    </head>
+    <body>                                                                                                                                                                          <!--Developer's Note to Self Column-->
+        <div class = "grid-container1">
+            <!-- the navbar -->
+            <div id = "navbar" class = "grid-item1">                                                                                                                                <!--Make it a navbar later-->
+                <div id = "top">   
+                    <!--INSERT Icon for Insight Vault-->                                                                                                                            <!--The whole thing is to be made a grid do it later-->
+                    <img class = "logo" src="https://cdn-icons-png.flaticon.com/128/10693/10693030.png" alt="money icons"/>
+                    <h1 id = "heading">InsightVault</h1>
+                    <!--SEARCH BAR-->
+                    <div class = "search-container">
+                        <form role="search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <label for="search-input" class="visually-hidden"></label>
+                        <input id="search-input" type="text" placeholder= "Search">
+                    </form>
+                    </div>
+                </div>
+                <hr class = "divider"/>
+                <div id = "middle" class = "flex-container1">
+                    <div class = "flex-item1"><a href = "./index.html"><i class="fa-solid fa-bars"></i> Dashboard</a></div>                                                                             
+                    <div class = "flex-item1"><a href = "./transactions.html"><i class="fa-solid fa-money-bill-transfer"></i> Transaction</a></div>
+                    <div class = "flex-item1"><a href = "./wishlist.html"><i class="fa-solid fa-heart"></i> Wishlist</a></div>                                                                                  <!--Try to get accurate icons later, CORRECT THE SPACING BETWEEN ICONS-->
+                    <div class = "flex-item1"><a href = "./reports.html"><i class="fa-solid fa-chart-simple"></i> Reports</a></div>                                                                                   <!--Make the page later in ver2.0-->
+                    <div class = "flex-item1"><a href = "./cards.html"><i class="fa-solid fa-credit-card"></i> Card</a></div>                                                                                <!--Make the page later in ver2.0-->
+                    <div class = "flex-item1"><a href = "./investments.html"><i class="fa-solid fa-money-bill-trend-up"></i> Investment</a></div>                                                                <!--Make the page later in ver2.0-->
+                </div>
+                <div id = "bottom" class = "flex-container2">
+                        <div class = "flex-item2"><i class="fa-solid fa-gear"></i> Settings</div>
+                        <div class = "flex-item2"><i class="fa-solid fa-circle-info"></i> Help</div>
+                        <div class = "flex-item2 log-out-btn"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log out</div>                                                    <!--Work on Authentication later, make the log-in page later-->           
+                </div>
+                <div id = "user-info">                                                                                                                                              <!--After creating the authentication logic and its backend, --> 
+                    <img id = "profile-picture" src = "https://img.freepik.com/free-photo/front-view-business-woman-suit_23-2148603018.jpg?semt=ais_hybrid&w=740&q=80" alt = "profile picture of the logged-in user"/>                                                                              <!--make the whole div dynamic not hard coded -->
+                    <div class = "login-user-info">
+                        <h3 id = "username">Jenny Stacy</h3>
+                        <h4 id = "email-id">jennystacy@gmail.com</h4>
+                    </div>                    
+                </div>
+            </div>
+
+            <!--The dashboard-->
+            <div id = "dashboard" class = "grid-item1 card"> 
+                <!--INSERT the icon here-->
+                <p id = "dashboard-heading">
+                    <span>
+                        <span class = "grey"><i class="fa-solid fa-bars"></i> Dashboard</span>
+                        <span>/ Overview</span>
+                    </span>
+                            
+                    <span class = "grey">
+                        <i class="fa-solid fa-bell"></i>  
+                        <i class="fa-solid fa-sun"></i>
+                    </span>
+                </p>
+                <hr id = "divider-2">
+                <!--INSERT the icons here--> 
+                <div class = "grid-container2">                                                                                                                                     <!--Grid Container 2-->
+                    <div id = "overview" class = "grid-item2">                                                                                                                      <!--First item of container: Overview-->
+                        <h2>Overview</h2>
+                        <!--Total Balance----------------------------------------------------------------------------------->                                                       <!--To be made a flexbox later-->
+                        <div id = "totals" class = "grid-item2 flex-conatiner3">
+                            <!--Total Balance-->
+                            <div class = "finance-info-outerbox flex-item3 card">
+                                <div id = "total-balance" class = "finance-info-innerbox card">
+                                    <div class = "icon-bg"><i class="totals-icon fa-solid fa-coins"></i></div>
+                                    <div class = "money-info">
+                                        <h3>Total Balance</h3> <i class="fa-solid fa-ellipsis"></i>
+                                        <p class = "sum-total">$28,389.98</p>
+                                    </div>
+                                </div>
+                                <p class = "monthly-compare-data">
+                                    <span class = "green"><i class="fa-solid fa-caret-up"></i> 2.5% </span>
+                                    vs last month
+                                </p>
+                            </div>
+
+                            <!--Monthly Income-->
+                            <div class = "finance-info-outerbox flex-item3 card">
+                                <div id = "monthy-income" class = "finance-info-innerbox card">
+                                    <div class = "icon-bg"><i class="totals-icon fa-solid fa-sack-dollar"></i></div>
+                                    <div class = "money-info">
+                                        <h3>Monthly Income</h3> <i class="fa-solid fa-ellipsis"></i>
+                                        <p class = "sum-total">$5,200.00</p>
+                                    </div>
+                                </div>
+                                <p class = "monthly-compare-data">
+                                    <span class = "green"><i class="fa-solid fa-caret-up"></i> 2.5% </span>
+                                    vs last month
+                                </p>
+                            </div>
+
+                            <!--Monthly Expense-->
+                            <div class = "finance-info-outerbox flex-item3 card">
+                                <div id = "monthly-expense" class = "finance-info-innerbox card">
+                                    <div class = "icon-bg"><i class="totals-icon fa-solid fa-credit-card"></i></div>
+                                    <div class = "money-info">
+                                        <h3>Monthly Expense</h3> <i class="fa-solid fa-ellipsis"></i>
+                                        <p class = "sum-total">$2,300.00</p>
+                                    </div>
+                                </div>
+                                <p class = "monthly-compare-data">
+                                    <span class = "green"><i class="fa-solid fa-caret-up"></i> 2.5% </span>
+                                    vs last month
+                                </p>
+                            </div>
+
+                            <!--Monthly Savings-->
+                            <div class = "finance-info-outerbox flex-item3 card">
+                                <div id = "monthly-savings" class = "finance-info-innerbox card">
+                                    <div class = "icon-bg"><i class="totals-icon fa-solid fa-piggy-bank"></i></div>
+                                    <div class = "money-info">
+                                        <h3>Monthly Savings</h3> <i class="fa-solid fa-ellipsis"></i>
+                                        <p class = "sum-total">$3,500.00</p>
+                                    </div>
+                                </div>
+                                <p class = "monthly-compare-data">
+                                    <span class = "green"><i class="fa-solid fa-caret-up"></i> 2.5% </span>
+                                    vs last month
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!--Cashflow and Asset Allocations----------------------------------------------------------------->
+                    <div id = "graphs-n-bars" class = "grid-item2">
+                        <div id = "cashflow" class = "card">
+                            <div class = "cashflow-flexbox">
+                                <h3 class = "tab-headings">Cashflow</h3>
+                                <div id = "graph-selection-bar">
+                                    <div>Income</div>
+                                    <div>Expense</div>
+                                    <div>Savings</div>
+                                    <!--
+                                    <div> 
+                                        <form action="">
+                                        <label for="cars"></label>
+                                        <select class = "btn" name="cars" id="cars">
+                                            <option value="Weekly">Weekly</option>
+                                            <option value="Monthy">Monthly</option>
+                                            <option value="Yearly">Yearly</option>
+                                            <option value="All-time">All Time</option>
+                                        </select>
+                                        </form>
+                                    </div>-->
+                                    <div class="dropdown">
+                                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Timeframe
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Weekly</a></li>
+                                        <li><a class="dropdown-item" href="#">Monthly</a></li>
+                                        <li><a class="dropdown-item" href="#">Quaterly</a></li>
+                                        <li><a class="dropdown-item" href="#">Yearly</a></li>
+                                    </ul>
+                                    </div>
+                                </div> 
+                            </div>
+                            <!-- TEMPORARY GRAPH IMAGE, CHANGE SOON TO REAL GRAPH -->
+                            <div id = "graph-1">
+                                <img class = "cashflow-graph-img" src = "https://cdn.corporatefinanceinstitute.com/assets/line-graph.jpg" alt = "temp-graph-image"/>   
+                            </div>
+                        </div>
+
+                        <div id = "asset-allocations" class = card>
+                            <div class = "asset-flexbox">
+                                <h3 class = "tab-headings">Asset Allocation</h3>
+                                
+                                <!-- Bootstrap Dropdown Menu -->
+                                <div class="dropdown">
+                                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Timeframe
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Weekly</a></li>
+                                        <li><a class="dropdown-item" href="#">Monthly</a></li>
+                                        <li><a class="dropdown-item" href="#">Quaterly</a></li>
+                                        <li><a class="dropdown-item" href="#">Yearly</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <p class = "sum-total">$28,389.98</p>
+                            <p class = "">
+                                <span class = "green"><i class="fa-solid fa-caret-up"></i> 2.5% </span>
+                                vs last month
+                            </p>
+                            <!--WORK ON GRAPH LOGIC LATER, TEMPORARY IMAGE FOR NOW-->
+                            <div id = "graph-2">
+                                <!-- <img class = "asset-graph-img" src = "https://phppot.com/wp-content/uploads/2023/01/chartjs-horizontal-stacked-bar.jpg" alt = "temp-graph-img"/> -->
+                                <img class = "asset-graph-img" src = "./chart2.png" alt = "temp-graph-img"/>
+
+                            </div>
+                            <div class = "asset-table-flexbox">
+                                <div class = "rows">
+                                    <p class = "asset-table-data"><i class="fa-solid fa-square pink"></i> Cash</p>
+                                    <p class = "asset-table-data">$15,388.98 <span class = "grey one-em">(60%)</span></p>
+                                </div>
+                                    <hr class = "divider-asset"/>
+                                <div class = "rows">
+                                    <p class = "asset-table-data"><i class="fa-solid fa-square skin"></i> Ford Stock</p>
+                                    <p class = "asset-table-data">$15,388.98 <span class = "grey one-em">(60%)</span></p>
+                                </div>
+                                    <hr class = "divider-asset"/>
+                                <div class = "rows">
+                                    <p class = "asset-table-data"><i class="fa-solid fa-square green"></i> Jaguar Stock</p>
+                                    <p class = "asset-table-data">$15,388.98 <span class = "grey one-em">(60%)</span></p>
+                                </div>
+                            </div>
+                        </div>       
+                    </div>
+
+                    <!--Bill & Payments------------------------------------------------------------------------------------>
+                    <div id = "bills-n-payments" class = "grid-item2 card">
+                        <div class = "bills-flexbox">
+                            <h3 class = "tab-headings">Bills & Payments</h3>
+                        
+                            <!-- Bootstrap Dropdown menu -->
+                            <div class="dropdown">
+                                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Timeframe
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Weekly</a></li>
+                                        <li><a class="dropdown-item" href="#">Monthly</a></li>
+                                        <li><a class="dropdown-item" href="#">Quaterly</a></li>
+                                        <li><a class="dropdown-item" href="#">Yearly</a></li>
+                                    </ul>
+                            </div>
+                        </div>
+                        <table class = "table">
+                            <thead>
+                                <tr class = "grey">
+                                    <th scope = "col">Name <i class="fa-solid fa-arrow-right-arrow-left"></i></th>
+                                    <th scope = "col">Type <i class="fa-solid fa-arrow-right-arrow-left"></i></th>
+                                    <th scope = "col">Amount <i class="fa-solid fa-arrow-right-arrow-left"></i></th>
+                                    <th scope = "col">Date <i class="fa-solid fa-arrow-right-arrow-left"></i></th>
+                                    <th scope = "col">Status <i class="fa-solid fa-arrow-right-arrow-left"></i></th>
+                                </tr>
+                            </thead>
+                            <tbody>   
+                                <tr>                                                                                                                                                <!--The data and the rows should be dynamically-->
+                                    <td><div class = "bills-icon-box"><i class="fa-brands fa-youtube"></i></div> Youtube Premium</td>                                               <!--created in that request making .js file and use data from database--> 
+                                    <td>Monthly Subscription</td>                                                                                                                   <!--For now hard-coding-->   
+                                    <td>$20</td>
+                                    <td>Oct 7, 2024</td>
+                                    <td><div class = "light-green">Success</div></td>
+                                    <td><!--INSERT ICON--></td>
+                                </tr>
+                                <tr>                                                                                      
+                                    <td><div class = "bills-icon-box"><i class="fa-brands fa-spotify"></i></div> Spotify Premium</td>                                                   
+                                    <td>Monthly Subscription</td>                                                                
+                                    <td>$8</td>
+                                    <td>Oct 6, 2024</td>
+                                    <td><div class = "light-green">Success</div></td>
+                                    <td><!--INSERT ICON--></td>
+                                </tr>
+                                <tr>                                                                                      
+                                    <td><div class = "bills-icon-box"><i class="fa-brands fa-amazon"></i></div> Amazon Prime</td>                                                   
+                                    <td>Monthly Subscription</td>                                                                  
+                                    <td>$100</td>
+                                    <td>Oct 5, 2024</td>
+                                    <td><div class = "light-green">Success</div></td>
+                                    <td><!--INSERT ICON--></td>
+                                </tr>
+                                <tr>                                                                                      
+                                    <td><div class = "bills-icon-box"><i class="fa-brands fa-apple"></i></div> iPhone 17 Pro</td>                                                   
+                                    <td>Purchase</td>                                                                  
+                                    <td>$8000</td>
+                                    <td>Oct 5, 2024</td>
+                                    <td><div class = "light-green">Success</div></td>
+                                    <td><!--INSERT ICON--></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ADD BOOTSTRAP JAVASCRIPT -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+        
+        <!-- ADD YOUR SCRIPT TAG-->
+        <script type="module" src="./index.js"></script>
+
+    </body>
+</html>

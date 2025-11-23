@@ -1,0 +1,198 @@
+body{
+    font-family: sans-serif;                                /*Change later*/
+    background-color: #F8FAFC;
+}
+
+.grid-container-1 {
+    display: grid;
+    grid-template-columns: 1.5fr 10fr;
+    grid-template-rows: auto auto;
+    gap: 0px;
+}
+
+.logo{
+    height: 40px;
+    width: 40px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+}
+
+#heading{
+    display: inline-block;
+    padding: 0px;
+    margin: 45px 0px 25px 0px;
+    font-size: 1.8rem;
+    font-family: "DM Serif Text", serif;                        /*Change the font properties later: size, style, color?*/
+    font-weight: 400;
+    font-style: normal;
+}
+
+.search-container{
+    background-color: rgba(128, 128, 128, 0.121);
+    border-radius: 10px;
+    padding: 7px 5px 5px 10px;
+    margin-bottom: 25px;
+    
+}
+
+#search-input{
+    border: none;
+    background-color: rgba(128, 128, 128, 0);
+    width: 170px;
+    height: 30px;
+    padding-left: 6px;
+    width: 85%;
+}
+
+.divider{
+    border-style: solid;     
+    margin: 0px;   
+    margin-bottom: 7px;
+    filter: blur(0.2px); /* slight blur to soften the edges */
+    color: lightslategray;
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.flex-container1{
+    display: flex;
+    gap: 0px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.flex-item1{
+    margin: 10px 0 10px 0;
+    width: 100%;
+    color: grey;
+    padding-left: 10px;
+}
+
+.flex-container2{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 25.5vh;
+    height: 75vh;
+    gap: 20px;
+}
+
+.flex-item2{
+    color: grey;
+    width: 100px;
+    text-align: left;
+    padding-left: 10px
+}
+
+#user-info {
+    margin-top: 40px;
+}
+
+#profile-picture {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    float: left;
+}
+
+.login-user-info {
+    text-align: left;
+    padding-left: 65px;
+}
+
+#username {
+    font-size: 1em;
+    font-weight: 500;
+    /* display: inline; */
+    text-align: left;
+}
+
+#email-id {
+    font-size: 0.9rem;
+    text-align: left;
+    color: grey;
+}
+
+.log-out-btn {
+    color: crimson;
+}
+
+.Navbar{
+    margin-left: 20px;
+}
+
+/*Dashboard*/
+
+.transactions{
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 10px 8px rgba(0,0,0,0.1);
+    margin: 20px;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+#divider-2{
+    width: calc(100% + 60px); /* compensate for left + right */
+    margin: 0px -30px;
+}
+
+#transactions-heading{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content:space-between;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+}
+
+.grey {
+    color: gray;
+}
+
+#overview {
+    margin-bottom: 20px;
+}
+
+#overview > h2 {
+    font-size: 1.7rem;
+    padding-top: 20px;
+    padding-bottom: 10px
+}
+
+.grid-container-3 {
+    display: grid;
+    grid-template-rows: 1fr ;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    grid-auto-rows: 1fr;
+    margin-top: 20px;
+}
+
+.grid-item-3 {
+    /* background-color: #F8FAFC; */
+    border-radius: 15px;
+    box-shadow: 0px 3px 5px 3px rgba(0,0,0,0.1);
+    padding: 20px;
+}
+
+/* navBar Highlight function from .js */
+.nav-active {
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.12);
+  transform: translateY(-2px);
+  transition: all 0.2s ease;
+  width: 100%;
+}
+.nav-active a {
+  color: #444444; /* optional: a slightly stronger color */
+  font-weight: 600;
+}

@@ -1,0 +1,49 @@
+/* body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); 
+  z-index: -1;
+} */
+
+/* body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  background-image: url("./rajasthani-bg.jpg"); 
+  background-size: cover;       
+  background-position: center;   
+  background-repeat: no-repeat;  
+  background-attachment: fixed;  
+  font-family: 'Poppins', sans-serif;
+} */
+
+
+*{
+    text-align: center;
+    /* position: relative; */
+}
+
+img {
+    position: relative;
+    left: 30px;
+}
+
+h1, p{
+    font-size: 1rem;
+}
+
+.content{
+    position: relative;
+    top: 50px;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+img{
+    height: 400px;
+}
